@@ -1,0 +1,40 @@
+Companies:
+  type: array
+  items:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: エネルギー会社ID
+      name:
+        type: string
+        description: エネルギー会社名
+      area_code:
+        type: integer
+        description: エリアID
+      area_name:
+        type: string
+        description: エリア
+
+#Plans:
+#  type: array
+#  items:
+#    type: object
+#    properties:
+#      id:
+#        type: integer
+#        description: エネルギー会社ID
+#      name:
+#        type: string
+#        description: プラン名
+
+Error:
+  type: object
+  properties:
+    code:
+      type: string
+    message:
+      type: string
+  required:
+    - code
+    - message
