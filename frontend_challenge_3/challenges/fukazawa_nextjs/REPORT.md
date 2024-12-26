@@ -1,10 +1,12 @@
 
 # Issue
 
-- Atomic DesignっぽくHTML要素を分解する
-- StorybookでUIを管理できるようにする
+- ~~Atomic DesignっぽくHTML要素を分解する~~
 - OpenAPIでAPI仕様書を作成する
+  - ~~電力会社検索 APIエンドポイント~~
+  - プラン検索 APIエンドポイント
 - json-serverでAPIモックサーバを作成する
+- StorybookでUIを管理できるようにする
 - HTML要素の作成
   - Atoms要素
     - ページタイトル
@@ -38,5 +40,5 @@
 
 [必須] も要素として分解するか。Flagで持たせるべきか
 
-- ![デザイン画像](./files/design.png)
+![デザイン画像](./files/design.png)
 
