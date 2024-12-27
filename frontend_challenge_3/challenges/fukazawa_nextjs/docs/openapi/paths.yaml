@@ -45,16 +45,46 @@
               code: 404
               message: "エネルギー会社が見つかりません。"
 
-#'/energy-companies/plans/':
-#  get:
-#    summary: エネルギー会社のプランを取得する。
-#    description: |
-#      エネルギー会社のプラン一覧を取得することができます。
-#    parameters:
-#      - name: area
-#        in: query
-#        description: エリア名を指定
-#        required: false
-#        schema:
-#          type: string
-#          format: string
+'/energy-companies/plans/':
+  get:
+    summary: エネルギー会社が提供するプランを取得する。
+    description: |
+      エネルギー会社が提供するプラン一覧を取得することができます。
+    parameters:
+      - name: company_id
+        in: query
+        description: 電力会社IDを指定
+        required: true
+        schema:
+          type: string
+          format: string
+    responses:
+      "200":
+        description: プランのJson形式データを配列で返却します。
+        content:
+          application/json:
+            schema:
+              $ref: './schemas.yaml#/Plans'
+            example:
+              - id: 2
+                name: "従量電灯B"
+                company_id: 1
+                company_name: "東京電力"
+                capacities:
+                  - name: "10A"
+                  - name: "15A"
+                  - name: "20A"
+                  - name: "30A"
+                  - name: "40A"
+                  - name: "50A"
+                  - name: "60A"
+
+      "404":
+        description: プランが見つからない場合は、エラーメッセージを返却します。
+        content:
+          application/json:
+            schema:
+              $ref: './schemas.yaml#/Error'
+            example:
+              code: 404
+              message: "提供できるプランが見つかりません。"

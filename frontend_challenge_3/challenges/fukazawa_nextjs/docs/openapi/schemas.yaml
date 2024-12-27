@@ -48,19 +48,19 @@ Plan:
 Capacity:
   type: object
   properties:
-    id:
-      type: integer
-      description: 契約容量ID
+    #id:
+    #  type: integer
+    #  description: 契約容量ID
     name:
       type: string
       description: 契約容量名
-    plan_id:
-      type: string
-      description: プランID
+    #plan_id:
+    #  type: string
+    #  description: プランID
   required:
-    - id
+    #- id
     - name
-    - plan_id
+    #- plan_id
 
 
 Companies:

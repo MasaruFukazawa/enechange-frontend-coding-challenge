@@ -4,7 +4,7 @@
 - ~~Atomic DesignっぽくHTML要素を分解する~~
 - OpenAPIでAPI仕様書を作成する
   - ~~電力会社検索 APIエンドポイント~~
-  - プラン検索 APIエンドポイント
+  - ~~プラン検索 APIエンドポイント~~
 - json-serverでAPIモックサーバを作成する
 - StorybookでUIを管理できるようにする
 - HTML要素の作成
