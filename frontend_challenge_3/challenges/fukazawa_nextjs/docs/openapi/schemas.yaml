@@ -29,19 +29,24 @@ Plan:
       type: string
       description: プラン名
     company_id:
-      type: string
+      type: integer
       description: エネルギー会社ID
     company_name:
       type: string
       description: エネルギー会社名
+    capacities:
+      type: array
+      items:
+        $ref: '#/Capacity'
   required:
     - id
     - name
     - company_id
     - company_name
 
+
 Capacity:
-  type: oject
+  type: object
   properties:
     id:
       type: integer
