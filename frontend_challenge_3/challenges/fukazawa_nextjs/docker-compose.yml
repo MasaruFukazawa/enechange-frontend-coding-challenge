@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+#  frontend:
+#    build:
+#      dockerfile: frontend/Dockerfile
+#    volumes:
+#      - ./frontend:/src
+#    command: /bin/bash -c "cd fullstack-develop-example-at-django-nextjs && npm run dev"
+#    ports:
+#      - "3000:3000"
+#    tty: true
+  api_mock:
+    build:
+      dockerfile: api_mock/Dockerfile
+    volumes:
+      - ./api_mock:/src
+    command: ["node", "/src/server.js"]
+    ports:
+      - "8888:8888"
+    tty: true
