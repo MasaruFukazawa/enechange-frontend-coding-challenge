@@ -2,6 +2,7 @@ FROM node:23-alpine
 
 COPY api_mock/package.json api_mock/package-lock.json /src/
 
+RUN npm install -g npm@latest
 RUN npm install --save-dev --prefix /src
 
 WORKDIR /src
