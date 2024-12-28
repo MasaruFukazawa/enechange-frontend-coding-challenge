@@ -28,12 +28,6 @@ Plan:
     name:
       type: string
       description: プラン名
-    company_id:
-      type: integer
-      description: エネルギー会社ID
-    company_name:
-      type: string
-      description: エネルギー会社名
     capacities:
       type: array
       items:

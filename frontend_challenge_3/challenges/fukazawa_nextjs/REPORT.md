@@ -5,7 +5,7 @@
 - ~~OpenAPIでAPI仕様書を作成する~~
   - ~~電力会社検索 APIエンドポイント~~
   - ~~プラン検索 APIエンドポイント~~
-- json-serverでAPIモックサーバを作成する
+- ~~json-serverでAPIモックサーバを作成する~~
 - StorybookでUIを管理できるようにする
 - HTML要素の作成
   - Atoms要素
@@ -28,11 +28,13 @@
   - ページ
     - シュミレーション
 
+
 # 技術的な決定事項
 
 - フレームワーク : nuxtjs を採用
 - mockサーバ : json-server を採用
-- 
+- UI管理 : Storybook を採用
+
 
 # HTML作成時の要素分解についての検討
 
