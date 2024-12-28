@@ -1,6 +1,6 @@
 const jsonServer = require('json-server')
 const server = jsonServer.create()
-const router = jsonServer.router('/src/db.json')
+const router = jsonServer.router('/app/db.json')
 const middlewares = jsonServer.defaults()
 
 // すべてのリクエストに対して、json-server 標準のミドルウェアを使う
