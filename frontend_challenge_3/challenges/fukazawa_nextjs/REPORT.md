@@ -6,7 +6,7 @@
   - ~~電力会社検索 APIエンドポイント~~
   - ~~プラン検索 APIエンドポイント~~
 - ~~json-serverでAPIモックサーバを作成する~~
-- StorybookでUIを管理できるようにする
+- ~~StorybookでUIを管理できるようにする~~
 - HTML要素の作成
   - Atoms要素
     - ページタイトル

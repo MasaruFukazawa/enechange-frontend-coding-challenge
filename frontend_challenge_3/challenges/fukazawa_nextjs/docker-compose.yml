@@ -10,6 +10,15 @@ services:
     ports:
       - "3000:3000"
     tty: true
+  storybook:
+    build:
+      dockerfile: frontend/Dockerfile
+    volumes:
+      - ./frontend:/app
+    command: /bin/ash -c "cd /app/enechange-frontend-coding-challenge && npm run storybook"
+    ports:
+      - "6006:6006"
+    tty: true
   api_mock:
     build:
       dockerfile: api_mock/Dockerfile
