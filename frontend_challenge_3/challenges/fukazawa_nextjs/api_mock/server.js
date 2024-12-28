@@ -22,7 +22,7 @@ server.get('/energy-companies/', (req, res) => {
     "message": "エネルギー会社が見つかりません。"
   }
 
-  if (query.id == 1) {
+  if (query.area_code == 1) {
 
     res.code = 200
     response_data = [
@@ -40,7 +40,7 @@ server.get('/energy-companies/', (req, res) => {
       }
     ]
 
-  } else if (query.id == 5) {
+  } else if (query.area_code == 5) {
 
     res.code = 200
     response_data = [
