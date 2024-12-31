@@ -22,3 +22,15 @@ body {
   background: var(--background);
   font-family: sans-serif, Arial, Helvetica;
 }
+
+/* 必須マーク用 */
+.required::before {
+  content: "必 須";
+  color: #ffffff;
+  background: #f95656;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+}
