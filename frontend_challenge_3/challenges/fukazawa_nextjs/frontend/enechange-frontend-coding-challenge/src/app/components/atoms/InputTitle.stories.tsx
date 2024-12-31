@@ -1,4 +1,4 @@
-// app/components/atoms/SectionTitle.stories.tsx
+// app/components/atoms/InputTitle.stories.tsx
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import InputTitle, { InputTitleProps } from './InputTitle';
