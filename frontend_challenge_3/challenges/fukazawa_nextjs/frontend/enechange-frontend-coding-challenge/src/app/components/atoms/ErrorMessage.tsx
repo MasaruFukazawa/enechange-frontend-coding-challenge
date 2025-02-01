@@ -8,11 +8,9 @@ interface ErrorMessageProps {
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ text }) => {
   return (
     <>
-      {text &&
-        <div className="text-xs text-white bg-red-400 p-2 w-[320px] mt-1">
-          { WarningIcon({ size: 20 }) }  {text}
-        </div>
-      }
+      <div className="text-xs text-white bg-red-400 p-2 w-[320px] mt-1">
+        { WarningIcon({ size: 20 }) }  {text}
+      </div>
     </>
   );
 };

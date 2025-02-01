@@ -27,9 +27,11 @@ const Comapany: React.FC<ComapanyProps> = ({
         name={selectBoxName}
         options={selectBoxOptions}
       />
-      <ErrorMessage
-        text={errorMessageText}
-      />
+      {errorMessageText &&
+        <ErrorMessage
+          text={errorMessageText}
+        />
+    } 
     </>
   );
 };
