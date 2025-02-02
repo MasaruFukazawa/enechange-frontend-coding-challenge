@@ -1,21 +1,19 @@
 import React from 'react';
 import InputTitle from '../atoms/InputTitle';
-import SelectBox from '../atoms/SelectBox';
 import ErrorMessage from '../atoms/ErrorMessage';
+import TextInput from '../atoms/TextInput';
 
-interface ComapanyProps {
+interface CostProps {
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  selectBoxName: string;
-  selectBoxOptions: { name: string }[];
+  textInputName: string;
   errorMessageText: string;
 } 
 
-const Comapany: React.FC<ComapanyProps> = ({ 
+const Cost: React.FC<CostProps> = ({ 
     inputTitleText,
     inputTitleTextIsRequired,
-    selectBoxName,
-    selectBoxOptions,
+    textInputName,
     errorMessageText,
 }) => {
   return (
@@ -24,9 +22,8 @@ const Comapany: React.FC<ComapanyProps> = ({
         text={inputTitleText}
         isRequired={inputTitleTextIsRequired}
       />
-      <SelectBox
-        name={selectBoxName}
-        options={selectBoxOptions}
+      <TextInput
+        name={textInputName}
       />
       {errorMessageText &&
         <ErrorMessage
@@ -37,4 +34,4 @@ const Comapany: React.FC<ComapanyProps> = ({
   );
 };
 
-export default Comapany;
+export default Cost;
