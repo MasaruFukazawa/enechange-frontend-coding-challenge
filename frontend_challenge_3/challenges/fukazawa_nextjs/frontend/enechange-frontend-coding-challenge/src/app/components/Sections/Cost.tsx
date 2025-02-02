@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from '../atoms/SectionTitle';
-import CostModule from '../modules/Cost';
+import CostModule from '../molecules/Cost';
 
 interface CostProps {
   sectionTitleText: string;

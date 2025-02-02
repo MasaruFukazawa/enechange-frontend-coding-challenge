@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Company, { CompanyProps } from './Company';
 
 export default {
-  title: 'modules/Company',
+  title: 'molecules/Company',
   component: Company,
 } as Meta;
 

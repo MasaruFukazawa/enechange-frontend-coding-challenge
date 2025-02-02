@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Plan, { PlanProps } from './Plan';
 
 export default {
-  title: 'modules/Plan',
+  title: 'molecules/Plan',
   component: Plan,
 } as Meta;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from '../atoms/SectionTitle';
-import ZipcodeMolecule from '../modules/Zipcode';
+import ZipcodeMolecule from '../molecules/Zipcode';
 
 interface ZipcodeProps {
   sectionTitleText: string;

@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Cost, { CostProps } from './Cost';
 
 export default {
-  title: 'modules/Cost',
+  title: 'molecules/Cost',
   component: Cost,
 } as Meta;
 

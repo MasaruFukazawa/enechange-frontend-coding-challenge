@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import ContractedCapacity, { ContractedCapacityProps } from './ContractedCapacity';
 
 export default {
-  title: 'modules/ContractedCapacity',
+  title: 'molecules/ContractedCapacity',
   component: ContractedCapacity,
 } as Meta;
 
