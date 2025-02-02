@@ -9,7 +9,7 @@ const MailInput: React.FC<MailInputProps> = ({ name }) => {
     <>
       <input
         type="email"
-        className='p-1 border-4 border-gray-300 rounded focus:border-orange-300 focus:outline-none w-[320px]'
+        className='p-1 border-4 border-gray-300 rounded focus:border-orange-300 focus:outline-none w-[320px] mb-1'
         name={name}
       />
     </>
