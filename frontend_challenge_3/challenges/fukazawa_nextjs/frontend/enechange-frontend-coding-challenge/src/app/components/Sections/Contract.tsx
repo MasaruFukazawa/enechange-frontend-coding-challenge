@@ -44,7 +44,7 @@ const Zipcode: React.FC<ZipcodeProps> = ({
   return (
     <section 
       id='contract'
-      className='pt-4'
+      className='pt-4 pb-8 mb-10 bg-white'
     >
       <SectionTitle
         text={sectionTitleText} 

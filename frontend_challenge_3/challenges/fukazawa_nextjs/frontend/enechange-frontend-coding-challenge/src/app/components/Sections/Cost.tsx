@@ -20,7 +20,7 @@ const Cost: React.FC<CostProps> = ({
   return (
     <section 
       id='contract'
-      className='pt-4'
+      className='pt-4 pb-8 mb-10 bg-white'
     >
       <SectionTitle
         text={sectionTitleText} 

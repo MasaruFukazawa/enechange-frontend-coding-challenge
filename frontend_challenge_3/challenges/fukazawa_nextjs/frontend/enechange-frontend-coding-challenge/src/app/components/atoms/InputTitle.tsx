@@ -9,7 +9,7 @@ const InputTitle: React.FC<InputTitleProps> = ({ text, isRequired = false }) => 
   return (
     <>
       <h3 
-        className={`text-base font-bold ${isRequired ? 'required' : ''}` + ' mb-1'}
+        className={`text-base font-bold ${isRequired ? 'required' : ''}` + ' mb-2'}
       >
         {text}
       </h3>

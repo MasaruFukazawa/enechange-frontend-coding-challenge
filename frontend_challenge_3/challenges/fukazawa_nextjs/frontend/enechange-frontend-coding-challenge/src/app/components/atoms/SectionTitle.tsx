@@ -6,7 +6,7 @@ interface SectionTitleProps {
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ text }) => {
   return (
-    <h2 className="pl-2 border-l-4 border-sectionTitleBarColor text-base font-bold pt-[5px] pb-[5px]">{text}</h2>
+    <h2 className="border-l-4 border-sectionTitleBarColor text-base font-bold pl-2 pt-2 pb-2">{text}</h2>
   );
 };
 
