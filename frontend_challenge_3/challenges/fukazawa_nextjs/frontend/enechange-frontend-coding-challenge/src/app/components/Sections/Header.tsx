@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ pageTitleText, pageDescriptionText }) =
   return (
     <section 
       id='header'
-      className='bg-gray-100 p-8'
+      className='bg-gray-100 p-20 text-center'
     >
       <PageTitle
         text={pageTitleText}
