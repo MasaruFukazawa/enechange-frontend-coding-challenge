@@ -24,7 +24,7 @@ const Cost: React.FC<CostProps> = ({
       />
       <TextInput
         name={textInputName}
-      />
+      /> 円
       {errorMessageText &&
         <ErrorMessage
           text={errorMessageText}
