@@ -1,20 +1,19 @@
 import React from 'react';
 import InputTitle from '../atoms/InputTitle';
-import ZipcodeAtom from '../atoms/Zipcode';
+import MailInput from '../atoms/MailInput';
 import ErrorMessage from '../atoms/ErrorMessage';
 
 interface ComapanyProps {
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  zipcodeAtomFirstCodeName: string;
-  zipcodeAtomLastCodeName: string;
+  mailInputName: string;
   errorMessageText: string;
 } 
+
 const Comapany: React.FC<ComapanyProps> = ({ 
     inputTitleText,
     inputTitleTextIsRequired,
-    zipcodeAtomFirstCodeName,
-    zipcodeAtomLastCodeName,
+    mailInputName,
     errorMessageText,
 }) => {
   return (
@@ -23,9 +22,8 @@ const Comapany: React.FC<ComapanyProps> = ({
         text={inputTitleText}
         isRequired={inputTitleTextIsRequired}
       />
-      <ZipcodeAtom
-        firstCodeName={zipcodeAtomFirstCodeName}
-        lastCodeName={zipcodeAtomLastCodeName}
+      <MailInput
+        name={mailInputName}
       />
       {errorMessageText &&
         <ErrorMessage
