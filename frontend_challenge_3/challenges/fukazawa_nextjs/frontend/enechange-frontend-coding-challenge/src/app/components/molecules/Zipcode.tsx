@@ -6,15 +6,16 @@ import ErrorMessage from '../atoms/ErrorMessage';
 interface ComapanyProps {
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  zipcodeAtomFirstCodeName: string;
-  zipcodeAtomLastCodeName: string;
+  zipcodeFirstCodeName: string;
+  zipcodeLastCodeName: string;
   errorMessageText: string;
-} 
+}
+
 const Comapany: React.FC<ComapanyProps> = ({ 
     inputTitleText,
     inputTitleTextIsRequired,
-    zipcodeAtomFirstCodeName,
-    zipcodeAtomLastCodeName,
+    zipcodeFirstCodeName,
+    zipcodeLastCodeName,
     errorMessageText,
 }) => {
   return (
@@ -24,8 +25,8 @@ const Comapany: React.FC<ComapanyProps> = ({
         isRequired={inputTitleTextIsRequired}
       />
       <ZipcodeAtom
-        firstCodeName={zipcodeAtomFirstCodeName}
-        lastCodeName={zipcodeAtomLastCodeName}
+        firstCodeName={zipcodeFirstCodeName}
+        lastCodeName={zipcodeLastCodeName}
       />
       {errorMessageText &&
         <ErrorMessage
