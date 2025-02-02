@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import Zipcode, { ZipcodeProps } from './Zipcode';
-import { error } from 'console';
 
 export default {
   title: 'sections/Zipcode',
