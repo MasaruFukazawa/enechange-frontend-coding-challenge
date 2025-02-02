@@ -7,7 +7,7 @@ interface InputDescriptionProps {
 const InputDescription: React.FC<InputDescriptionProps> = ({ text }) => {
   return (
     <>
-      <div className="text-xs text-gray-600 bg-gray-300 p-2 w-[320px]">
+      <div className="text-xs text-gray-600 bg-gray-300 p-2 w-[320px] mb-1">
         {text}
       </div>
     </>
