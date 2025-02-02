@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionTitle from '../atoms/SectionTitle';
-import CompanyModule from '../molecules/Company';
-import PlanModule from '../molecules/Plan';
-import ContractedCapacityModule from '../molecules/ContractedCapacity';
+import CompanyModule from '../modules/Company';
+import PlanModule from '../modules/Plan';
+import ContractedCapacityModule from '../modules/ContractedCapacity';
 
 interface ZipcodeProps {
   sectionTitleText: string;

@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Zipcode, { ZipcodeProps } from './Zipcode';
 
 export default {
-  title: 'molecules/Zipcode',
+  title: 'modules/Zipcode',
   component: Zipcode,
 } as Meta;
 

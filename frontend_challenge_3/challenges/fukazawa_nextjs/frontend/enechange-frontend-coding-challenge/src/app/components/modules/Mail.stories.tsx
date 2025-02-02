@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Mail, { MailProps } from './Mail';
 
 export default {
-  title: 'molecules/Mail',
+  title: 'modules/Mail',
   component: Mail,
 } as Meta;
 
