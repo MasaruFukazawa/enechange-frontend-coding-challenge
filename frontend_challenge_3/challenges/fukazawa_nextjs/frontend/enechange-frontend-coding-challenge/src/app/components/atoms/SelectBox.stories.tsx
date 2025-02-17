@@ -11,13 +11,14 @@ export default {
 const Template: StoryFn<SelectBoxProps> = (args) => <SelectBox {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-    name: 'select_name',
-    options: [
-      { name: 'option1' },
-      { name: 'option2' },
-      { name: 'option3' },
-      { name: 'option4' },
-      { name: 'option5' },
-    ]
+  selectBoxName: 'select_name',
+  selectBoxOptions: [
+    { name: 'option1' },
+    { name: 'option2' },
+    { name: 'option3' },
+    { name: 'option4' },
+    { name: 'option5' },
+  ]
 };
