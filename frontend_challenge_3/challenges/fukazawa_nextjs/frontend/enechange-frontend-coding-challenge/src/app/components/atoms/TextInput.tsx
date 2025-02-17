@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TextInputProps {
   textInputName: string;
-  textInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  textInputOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const TextInput: React.FC<TextInputProps> = ({

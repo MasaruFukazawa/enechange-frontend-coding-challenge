@@ -3,8 +3,8 @@ import React from 'react';
 interface ZipcodeProps {
   zipcodeUppperInputName: string;
   zipcodeLowerInputName: string;
-  zipcodeUpperInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  zipcodeLowerInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeUpperInputOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeLowerInputOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Zipcode: React.FC<ZipcodeProps> = ({
@@ -18,7 +18,6 @@ const Zipcode: React.FC<ZipcodeProps> = ({
       <div
         // 背景を灰色にする
         className="bg-gray-300 w-[348px] mb-1"
-
       >
         <input
           type="text"

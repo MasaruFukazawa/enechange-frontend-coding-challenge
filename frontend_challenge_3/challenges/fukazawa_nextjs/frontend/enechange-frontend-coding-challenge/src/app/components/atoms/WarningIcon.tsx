@@ -5,7 +5,7 @@ interface WarningIconProps {
 }
 
 const WarningIcon: React.FC<WarningIconProps> = ({
-  warningIconSize = 24 
+  warningIconSize = 24,
 }) => {
   return (
     <svg

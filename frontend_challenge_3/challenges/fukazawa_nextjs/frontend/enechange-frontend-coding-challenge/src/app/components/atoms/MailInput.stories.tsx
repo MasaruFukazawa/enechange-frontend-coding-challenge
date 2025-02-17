@@ -11,6 +11,8 @@ export default {
 const Template: StoryFn<MailInputProps> = (args) => <MailInput {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-    name: 'メールアドレス',
+  mailInputName: 'メールアドレス',
+  mailInputOnChange: () => alert("call mailInputOnChange"),
 };

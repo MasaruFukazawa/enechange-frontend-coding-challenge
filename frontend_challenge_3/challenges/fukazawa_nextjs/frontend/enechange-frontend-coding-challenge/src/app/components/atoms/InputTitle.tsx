@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface InputTitleProps {
-  text: string;
+  children: ReactNode;
   isRequired: boolean;
 }
 
-const InputTitle: React.FC<InputTitleProps> = ({ text, isRequired = false }) => {
+const InputTitle: React.FC<InputTitleProps> = ({
+  children,
+  isRequired = false,
+}) => {
   return (
     <>
       <h3 
         className={`text-base font-bold ${isRequired ? 'required' : ''}` + ' mb-2'}
       >
-        {text}
+        {children}
       </h3>
     </>
   );

@@ -20,5 +20,6 @@ Default.args = {
     { name: 'option3' },
     { name: 'option4' },
     { name: 'option5' },
-  ]
+  ],
+  selectBoxOnChange: (e) => alert("call selectBoxOnChange"),
 };

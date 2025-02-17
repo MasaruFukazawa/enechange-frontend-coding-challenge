@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import WarningIcon from './WarningIcon';
 
 interface ErrorMessageProps {
-  text: string;
+  children: string;
 }
 
-const ErrorMessage: React.FC<ErrorMessageProps> = ({ text }) => {
+const ErrorMessage: React.FC<ErrorMessageProps> = ({
+  children,
+}) => {
   return (
     <>
       <div className="text-xs text-white bg-red-400 p-2 w-[320px]">
-        { WarningIcon({ size: 20 }) }  {text}
+        { WarningIcon({ size: 20 }) }  {children}
       </div>
     </>
   );

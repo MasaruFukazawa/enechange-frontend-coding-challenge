@@ -11,13 +11,14 @@ export default {
 const Template: StoryFn<InputTitleProps> = (args) => <InputTitle {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-    text: '電力会社',
-    isRequired: false,
+  children: '電力会社',
+  isRequired: false,
 };
 
 export const Required = Template.bind({});
 Required.args = {
-    text: '電力会社',
-    isRequired: true,
+  children: '電力会社',
+  isRequired: true,
 };

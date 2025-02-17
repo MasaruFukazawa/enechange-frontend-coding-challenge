@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface PageTitleProps {
-  pageTitleText: string;
+  children: ReactNode;
 }
 
 const PageTitle: React.FC<PageTitleProps> = ({
-  pageTitleText
+  children,
 }) => {
   return (
     <h1 className="text-2xl font-bold text-center">
-      {pageTitleText}
+      {children}
     </h1>
   );
 };
