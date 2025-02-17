@@ -11,4 +11,7 @@ export default {
 const Template: StoryFn<WarningIconProps> = (args) => <WarningIcon {...args} />;
 
 export const Default = Template.bind({});
-// Default.args = {};
+
+Default.args = {
+  warningIconSize: 24,
+};

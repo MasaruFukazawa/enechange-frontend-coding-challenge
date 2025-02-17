@@ -1,14 +1,16 @@
 import React from 'react';
 
 interface WarningIconProps {
-  size?: number;
+  warningIconSize?: number;
 }
 
-const WarningIcon: React.FC<WarningIconProps> = ({ size = 24 }) => {
+const WarningIcon: React.FC<WarningIconProps> = ({
+  warningIconSize = 24 
+}) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={warningIconSize}
+      height={warningIconSize}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
