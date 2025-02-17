@@ -11,8 +11,9 @@ export default {
 const Template: StoryFn<PageTitleProps> = (args) => <PageTitle {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-    text: (
+  pageTitleText: (
       <>
           電気代から<br />かんたんシュミレーション
       </>

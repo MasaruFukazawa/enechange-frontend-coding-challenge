@@ -1,13 +1,15 @@
 import React from 'react';
 
 interface PageTitleProps {
-  text: string;
+  pageTitleText: string;
 }
 
-const PageTitle: React.FC<PageTitleProps> = ({ text }) => {
+const PageTitle: React.FC<PageTitleProps> = ({
+  pageTitleText
+}) => {
   return (
     <h1 className="text-2xl font-bold text-center">
-      {text}
+      {pageTitleText}
     </h1>
   );
 };
