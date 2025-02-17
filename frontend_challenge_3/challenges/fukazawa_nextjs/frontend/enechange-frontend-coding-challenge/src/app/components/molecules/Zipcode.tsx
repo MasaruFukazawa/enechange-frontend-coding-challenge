@@ -1,22 +1,29 @@
+
 import React from 'react';
 import InputTitle from '../atoms/InputTitle';
 import ZipcodeAtom from '../atoms/Zipcode';
 import ErrorMessage from '../atoms/ErrorMessage';
 
-interface ComapanyProps {
+interface ZipcodeProps {
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  zipcodeFirstCodeName: string;
-  zipcodeLastCodeName: string;
-  errorMessageText: string;
+  uppperZipcodeName: string;
+  lowerZipcodeName: string;
+  uppperZipcodeErrorMessageText: string;
+  lowerZipcodeErrorMessageText: string;
+  onUpperZipcodeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onLowerZipcodeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Comapany: React.FC<ComapanyProps> = ({ 
+const Zipcode: React.FC<ZipcodeProps> = ({ 
     inputTitleText,
     inputTitleTextIsRequired,
-    zipcodeFirstCodeName,
-    zipcodeLastCodeName,
-    errorMessageText,
+    uppperZipcodeName,
+    lowerZipcodeName,
+    uppperZipcodeErrorMessageText,
+    lowerZipcodeErrorMessageText,
+    onUpperZipcodeChange,
+    onLowerZipcodeChange,
 }) => {
   return (
     <>
@@ -25,16 +32,23 @@ const Comapany: React.FC<ComapanyProps> = ({
         isRequired={inputTitleTextIsRequired}
       />
       <ZipcodeAtom
-        firstCodeName={zipcodeFirstCodeName}
-        lastCodeName={zipcodeLastCodeName}
+        uppperZipcodeName={uppperZipcodeName}
+        lowerZipcodeName={lowerZipcodeName}
+        onUpperZipcodeChange={onUpperZipcodeChange}
+        onLowerZipcodeChange={onLowerZipcodeChange} 
       />
-      {errorMessageText &&
+      {uppperZipcodeErrorMessageText &&
         <ErrorMessage
-          text={errorMessageText}
+          text={uppperZipcodeErrorMessageText}
         />
-    } 
+      } 
+      {lowerZipcodeErrorMessageText &&
+        <ErrorMessage
+          text={lowerZipcodeErrorMessageText}
+        />
+      } 
     </>
   );
 };
 
-export default Comapany;
+export default Zipcode;

@@ -11,6 +11,7 @@ export default {
 const Template: StoryFn<SubmitButtonProps> = (args) => <SubmitButton {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-    text: '結果を見る',
+  submitButtonText: '結果を見る',
 };

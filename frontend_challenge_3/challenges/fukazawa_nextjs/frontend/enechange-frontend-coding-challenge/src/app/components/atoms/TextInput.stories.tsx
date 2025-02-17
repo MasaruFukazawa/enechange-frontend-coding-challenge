@@ -11,6 +11,7 @@ export default {
 const Template: StoryFn<TextInputProps> = (args) => <TextInput {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
   textInputName: '結果を見る',
   textInputOnChange: () => alert("call textInputOnChange"),
