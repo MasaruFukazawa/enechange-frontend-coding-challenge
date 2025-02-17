@@ -11,6 +11,7 @@ export default {
 const Template: StoryFn<SectionTitleProps> = (args) => <SectionTitle {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-    text: '電気のご使用状況について教えて下さい',
+  sectionTitleText: '電気のご使用状況について教えて下さい',
 };
