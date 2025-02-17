@@ -10,7 +10,10 @@ export default {
 const Template: StoryFn<ZipcodeProps> = (args) => <Zipcode {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-  firstCodeName: 'zip_upper',
-  lastCodeName: 'zip_lower',
+  zipcodeUppperInputName: 'zip_upper',
+  zipcodeLowerInputName: 'zip_lower',
+  zipcodeUpperInputOnChange: () => alert("call zipcodeUpperInputOnChange"),
+  zipcodeLowerInputOnChange: () => alert("call zipcodeLowerInputOnChange"),
 };
