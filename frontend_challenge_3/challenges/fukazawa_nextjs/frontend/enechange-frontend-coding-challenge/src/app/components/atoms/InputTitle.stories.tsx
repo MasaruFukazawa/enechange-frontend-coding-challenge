@@ -18,6 +18,7 @@ Default.args = {
 };
 
 export const Required = Template.bind({});
+
 Required.args = {
   children: '電力会社',
   isRequired: true,
