@@ -7,45 +7,48 @@ import ErrorMessage from '../atoms/ErrorMessage';
 interface ZipcodeProps {
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  uppperZipcodeName: string;
-  lowerZipcodeName: string;
-  uppperZipcodeErrorMessageText: string;
-  lowerZipcodeErrorMessageText: string;
-  onUpperZipcodeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onLowerZipcodeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeUppperInputName: string;
+  zipcodeLowerInputName: string;
+  zipcodeUpperInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeLowerInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeUppperErrorMessageText: string;
+  zipcodeLowerErrorMessageText: string;
 }
 
 const Zipcode: React.FC<ZipcodeProps> = ({ 
     inputTitleText,
     inputTitleTextIsRequired,
-    uppperZipcodeName,
-    lowerZipcodeName,
-    uppperZipcodeErrorMessageText,
-    lowerZipcodeErrorMessageText,
-    onUpperZipcodeChange,
-    onLowerZipcodeChange,
-}) => {
+    zipcodeUppperInputName,
+    zipcodeLowerInputName,
+    zipcodeUpperInputOnChange,
+    zipcodeLowerInputOnChange,
+    zipcodeUppperErrorMessageText,
+    zipcodeLowerErrorMessageText,
+
+  }) => {
   return (
     <>
       <InputTitle 
-        text={inputTitleText}
         isRequired={inputTitleTextIsRequired}
-      />
+      >
+        {inputTitleText}
+      </InputTitle>
+
       <ZipcodeAtom
-        uppperZipcodeName={uppperZipcodeName}
-        lowerZipcodeName={lowerZipcodeName}
-        onUpperZipcodeChange={onUpperZipcodeChange}
-        onLowerZipcodeChange={onLowerZipcodeChange} 
+        zipcodeUppperInputName={zipcodeUppperInputName}
+        zipcodeLowerInputName={zipcodeLowerInputName}
+        zipcodeUpperInputOnChange={zipcodeUpperInputOnChange}
+        zipcodeLowerInputOnChange={zipcodeLowerInputOnChange} 
       />
-      {uppperZipcodeErrorMessageText &&
-        <ErrorMessage
-          text={uppperZipcodeErrorMessageText}
-        />
+      {zipcodeUppperErrorMessageText &&
+        <ErrorMessage>
+          {zipcodeUppperErrorMessageText}
+        </ErrorMessage>
       } 
-      {lowerZipcodeErrorMessageText &&
-        <ErrorMessage
-          text={lowerZipcodeErrorMessageText}
-        />
+      {zipcodeLowerErrorMessageText &&
+        <ErrorMessage>
+          {zipcodeLowerErrorMessageText}
+        </ErrorMessage>
       } 
     </>
   );

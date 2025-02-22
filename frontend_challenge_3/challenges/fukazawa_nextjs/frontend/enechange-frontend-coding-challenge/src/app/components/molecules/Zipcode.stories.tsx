@@ -10,9 +10,14 @@ export default {
 const Template: StoryFn<ZipcodeProps> = (args) => <Zipcode {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
   inputTitleText: '電気を使用する場所の郵便番号',
   inputTitleTextIsRequired: true,
-  zipcodeAtomFirstCodeName: 'zip_upper',
-  zipcodeAtomLastCodeName: 'zip_lower',
+  zipcodeUppperInputName: 'zip_upper',
+  zipcodeLowerInputName: 'zip_lower',
+  zipcodeUpperInputOnChange: () => {},
+  zipcodeLowerInputOnChange: () => {},
+  zipcodeUppperErrorMessageText: '',
+  zipcodeLowerErrorMessageText: '',
 };
