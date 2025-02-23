@@ -11,7 +11,8 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   return (
     <>
       <div className="text-xs text-white bg-red-400 p-2 w-[320px] mb-1">
-        { WarningIcon({ size: 20 }) }  {children}
+        { WarningIcon({ size: 20 }) }
+        {children}
       </div>
     </>
   );
