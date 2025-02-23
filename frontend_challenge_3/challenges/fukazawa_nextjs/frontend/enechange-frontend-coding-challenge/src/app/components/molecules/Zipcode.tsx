@@ -6,7 +6,7 @@ import ErrorMessage from '../atoms/ErrorMessage';
 
 interface ZipcodeProps {
   inputTitleText: string;
-  inputTitleTextIsRequired: boolean;
+  inputTitleIsRequired: boolean;
   zipcodeUppperInputName: string;
   zipcodeLowerInputName: string;
   zipcodeUpperInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,7 +17,7 @@ interface ZipcodeProps {
 
 const Zipcode: React.FC<ZipcodeProps> = ({ 
     inputTitleText,
-    inputTitleTextIsRequired,
+    inputTitleIsRequired,
     zipcodeUppperInputName,
     zipcodeLowerInputName,
     zipcodeUpperInputOnChange,
@@ -29,11 +29,10 @@ const Zipcode: React.FC<ZipcodeProps> = ({
   return (
     <>
       <InputTitle 
-        isRequired={inputTitleTextIsRequired}
+        isRequired={inputTitleIsRequired}
       >
         {inputTitleText}
       </InputTitle>
-
       <ZipcodeAtom
         zipcodeUppperInputName={zipcodeUppperInputName}
         zipcodeLowerInputName={zipcodeLowerInputName}

@@ -13,7 +13,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   inputTitleText: '電気を使用する場所の郵便番号',
-  inputTitleTextIsRequired: true,
+  inputTitleIsRequired: true,
   zipcodeUppperInputName: 'zip_upper',
   zipcodeLowerInputName: 'zip_lower',
   zipcodeUpperInputOnChange: () => {},
