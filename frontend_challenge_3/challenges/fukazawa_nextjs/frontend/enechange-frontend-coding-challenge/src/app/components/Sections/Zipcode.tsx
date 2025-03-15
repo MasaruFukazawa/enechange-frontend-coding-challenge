@@ -10,7 +10,7 @@ interface ZipcodeProps {
   zipcodeLowerInputName: string;
   zipcodeUpperInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   zipcodeLowerInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  zipcodeUppperErrorMessageText: string;
+  zipcodeUpperErrorMessageText: string;
   zipcodeLowerErrorMessageText: string;
 } 
 
@@ -22,7 +22,7 @@ const Zipcode: React.FC<ZipcodeProps> = ({
   zipcodeLowerInputName,
   zipcodeUpperInputOnChange,
   zipcodeLowerInputOnChange,
-  zipcodeUppperErrorMessageText,
+  zipcodeUpperErrorMessageText,
   zipcodeLowerErrorMessageText
 }) => {
   return (
@@ -41,7 +41,7 @@ const Zipcode: React.FC<ZipcodeProps> = ({
           zipcodeLowerInputName={zipcodeLowerInputName}
           zipcodeUpperInputOnChange={zipcodeUpperInputOnChange}
           zipcodeLowerInputOnChange={zipcodeLowerInputOnChange}
-          zipcodeUppperErrorMessageText={zipcodeUppperErrorMessageText}
+          zipcodeUpperErrorMessageText={zipcodeUpperErrorMessageText}
           zipcodeLowerErrorMessageText={zipcodeLowerErrorMessageText}
         />
       </div>

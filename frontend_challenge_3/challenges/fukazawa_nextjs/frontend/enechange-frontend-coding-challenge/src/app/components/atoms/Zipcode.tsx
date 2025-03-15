@@ -1,14 +1,14 @@
 import React from 'react';
 
 interface ZipcodeProps {
-  zipcodeUppperInputName: string;
+  zipcodeUpperInputName: string;
   zipcodeLowerInputName: string;
   zipcodeUpperInputOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   zipcodeLowerInputOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Zipcode: React.FC<ZipcodeProps> = ({
-  zipcodeUppperInputName,
+  zipcodeUpperInputName,
   zipcodeLowerInputName,
   zipcodeUpperInputOnChange,
   zipcodeLowerInputOnChange,
@@ -21,7 +21,7 @@ const Zipcode: React.FC<ZipcodeProps> = ({
       >
         <input
           type="text"
-          name={zipcodeUppperInputName}
+          name={zipcodeUpperInputName}
           maxLength={3}
           onChange={zipcodeUpperInputOnChange}
           className="p-1 border-4 border-gray-300 rounded focus:border-orange-300 focus:outline-none w-[160px]"

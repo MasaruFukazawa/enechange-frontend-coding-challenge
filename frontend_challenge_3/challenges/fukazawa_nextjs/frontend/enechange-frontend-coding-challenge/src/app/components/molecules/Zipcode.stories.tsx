@@ -18,6 +18,6 @@ Default.args = {
   zipcodeLowerInputName: 'zip_lower',
   zipcodeUpperInputOnChange: () => {},
   zipcodeLowerInputOnChange: () => {},
-  zipcodeUppperErrorMessageText: '',
+  zipcodeUpperErrorMessageText: '',
   zipcodeLowerErrorMessageText: '',
 };

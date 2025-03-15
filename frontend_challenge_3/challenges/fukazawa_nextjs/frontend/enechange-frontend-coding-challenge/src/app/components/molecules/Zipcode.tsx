@@ -7,22 +7,22 @@ import ErrorMessage from '../atoms/ErrorMessage';
 interface ZipcodeProps {
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  zipcodeUppperInputName: string;
+  zipcodeUpperInputName: string;
   zipcodeLowerInputName: string;
   zipcodeUpperInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   zipcodeLowerInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  zipcodeUppperErrorMessageText: string;
+  zipcodeUpperErrorMessageText: string;
   zipcodeLowerErrorMessageText: string;
 }
 
 const Zipcode: React.FC<ZipcodeProps> = ({ 
     inputTitleText,
     inputTitleTextIsRequired,
-    zipcodeUppperInputName,
+    zipcodeUpperInputName,
     zipcodeLowerInputName,
     zipcodeUpperInputOnChange,
     zipcodeLowerInputOnChange,
-    zipcodeUppperErrorMessageText,
+    zipcodeUpperErrorMessageText,
     zipcodeLowerErrorMessageText,
 
   }) => {
@@ -34,14 +34,14 @@ const Zipcode: React.FC<ZipcodeProps> = ({
         {inputTitleText}
       </InputTitle>
       <ZipcodeAtom
-        zipcodeUppperInputName={zipcodeUppperInputName}
+        zipcodeUpperInputName={zipcodeUpperInputName}
         zipcodeLowerInputName={zipcodeLowerInputName}
         zipcodeUpperInputOnChange={zipcodeUpperInputOnChange}
         zipcodeLowerInputOnChange={zipcodeLowerInputOnChange} 
       />
-      {zipcodeUppperErrorMessageText &&
+      {zipcodeUpperErrorMessageText &&
         <ErrorMessage>
-          {zipcodeUppperErrorMessageText}
+          {zipcodeUpperErrorMessageText}
         </ErrorMessage>
       } 
       {zipcodeLowerErrorMessageText &&
