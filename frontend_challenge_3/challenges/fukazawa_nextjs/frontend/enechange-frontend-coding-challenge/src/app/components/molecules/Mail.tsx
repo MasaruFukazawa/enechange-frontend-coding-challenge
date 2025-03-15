@@ -19,17 +19,18 @@ const Comapany: React.FC<ComapanyProps> = ({
   return (
     <>
       <InputTitle 
-        text={inputTitleText}
         isRequired={inputTitleTextIsRequired}
-      />
+      >
+        {inputTitleText}
+      </InputTitle>
       <MailInput
-        name={mailInputName}
+        mailInputName={mailInputName}
       />
       {errorMessageText &&
-        <ErrorMessage
-          text={errorMessageText}
-        />
-    } 
+        <ErrorMessage>
+          {errorMessageText}
+        </ErrorMessage>
+      } 
     </>
   );
 };

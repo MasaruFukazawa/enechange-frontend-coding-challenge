@@ -13,12 +13,12 @@ const Header: React.FC<HeaderProps> = ({ pageTitleText, pageDescriptionText }) =
       id='header'
       className='bg-gray-100 p-10 text-center'
     >
-      <PageTitle
-        text={pageTitleText}
-      />
-      <PageDescription
-        text={pageDescriptionText}
-      />
+      <PageTitle>
+        {pageTitleText}
+      </PageTitle>
+      <PageDescription>
+        {pageDescriptionText}
+      </PageDescription>
     </section>
   );
 };

@@ -6,7 +6,7 @@ import InputDescription from '../atoms/InputDescription';
 
 interface PlanProps {
   inputTitleText: string;
-  inputTitleIsRequired: boolean;
+  inputTitleTextIsRequired: boolean;
   inputDescriptionText: string;
   selectBoxName: string;
   selectBoxOptions: { name: string }[];
@@ -15,7 +15,7 @@ interface PlanProps {
 } 
 const Plan: React.FC<PlanProps> = ({ 
     inputTitleText,
-    inputTitleIsRequired,
+    inputTitleTextIsRequired,
     inputDescriptionText,
     selectBoxName,
     selectBoxOptions,
@@ -25,7 +25,7 @@ const Plan: React.FC<PlanProps> = ({
   return (
     <>
       <InputTitle 
-        isRequired={inputTitleIsRequired}
+        isRequired={inputTitleTextIsRequired}
       >
         {inputTitleText}
       </InputTitle>
@@ -41,7 +41,7 @@ const Plan: React.FC<PlanProps> = ({
         <ErrorMessage>
           {errorMessageText}
         </ErrorMessage>
-    } 
+      } 
     </>
   );
 };

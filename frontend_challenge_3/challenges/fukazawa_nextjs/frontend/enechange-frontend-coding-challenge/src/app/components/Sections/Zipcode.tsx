@@ -6,34 +6,43 @@ interface ZipcodeProps {
   sectionTitleText: string;
   inputTitleText: string;
   inputTitleTextIsRequired: boolean;
-  zipcodeFirstCodeName: string;
-  zipcodeLastCodeName: string;
-  errorMessageText: string;
+  zipcodeUppperInputName: string;
+  zipcodeLowerInputName: string;
+  zipcodeUpperInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeLowerInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  zipcodeUppperErrorMessageText: string;
+  zipcodeLowerErrorMessageText: string;
 } 
 
 const Zipcode: React.FC<ZipcodeProps> = ({ 
   sectionTitleText,
   inputTitleText,
   inputTitleTextIsRequired,
-  zipcodeFirstCodeName,
-  zipcodeLastCodeName,
-  errorMessageText,
+  zipcodeUppperInputName,
+  zipcodeLowerInputName,
+  zipcodeUpperInputOnChange,
+  zipcodeLowerInputOnChange,
+  zipcodeUppperErrorMessageText,
+  zipcodeLowerErrorMessageText
 }) => {
   return (
     <section 
       id='zipcode'
       className='pt-4 pb-8 mb-10 bg-white'
     >
-      <SectionTitle
-        text={sectionTitleText}
-      />
+      <SectionTitle>
+        {sectionTitleText}
+      </SectionTitle>
       <div className='pl-2 pt-8'>
         <ZipcodeMolecule
           inputTitleText={inputTitleText}
           inputTitleTextIsRequired={inputTitleTextIsRequired}
-          zipcodeFirstCodeName={zipcodeFirstCodeName}
-          zipcodeLastCodeName={zipcodeLastCodeName}
-          errorMessageText={errorMessageText}
+          zipcodeUppperInputName={zipcodeUppperInputName}
+          zipcodeLowerInputName={zipcodeLowerInputName}
+          zipcodeUpperInputOnChange={zipcodeUpperInputOnChange}
+          zipcodeLowerInputOnChange={zipcodeLowerInputOnChange}
+          zipcodeUppperErrorMessageText={zipcodeUppperErrorMessageText}
+          zipcodeLowerErrorMessageText={zipcodeLowerErrorMessageText}
         />
       </div>
     </section>

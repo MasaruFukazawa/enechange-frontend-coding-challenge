@@ -21,18 +21,19 @@ const Comapany: React.FC<ComapanyProps> = ({
   return (
     <>
       <InputTitle 
-        text={inputTitleText}
         isRequired={inputTitleTextIsRequired}
-      />
+      >
+        {inputTitleText}
+      </InputTitle>
       <SelectBox
-        name={selectBoxName}
-        options={selectBoxOptions}
+        selectBoxName={selectBoxName}
+        selectBoxOptions={selectBoxOptions}
       />
       {errorMessageText &&
-        <ErrorMessage
-          text={errorMessageText}
-        />
-    } 
+        <ErrorMessage>
+          {errorMessageText}
+        </ErrorMessage>
+      } 
     </>
   );
 };

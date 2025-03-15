@@ -14,7 +14,10 @@ Default.args = {
   sectionTitleText : "郵便番号をご入力ください",
   inputTitleText : "電気を使用する場所の郵便番号",
   inputTitleTextIsRequired : true,
-  zipcodeFirstCodeName : "zip_upper",
-  zipcodeLastCodeName : "zip_lower",
-  errorMessageText: ""
+  zipcodeUppperInputName : "zip_upper",
+  zipcodeLowerInputName : "zip_lower",
+  zipcodeUpperInputOnChange: () => alert("zipcodeUpperInputOnChange called"),
+  zipcodeLowerInputOnChange: () => alert("zipcodeLowerInputOnChange called"),
+  zipcodeUppperErrorMessageText : "",
+  zipcodeLowerErrorMessageText : "",
 };

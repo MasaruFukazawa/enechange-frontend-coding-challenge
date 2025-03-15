@@ -22,9 +22,9 @@ const Cost: React.FC<CostProps> = ({
       id='contract'
       className='pt-4 pb-8 mb-10 bg-white'
     >
-      <SectionTitle
-        text={sectionTitleText} 
-      />
+      <SectionTitle>
+        {sectionTitleText}
+      </SectionTitle>
       <div className='pl-2 pt-8'>
         <CostModule
           inputTitleText={costInputTitleText}

@@ -13,6 +13,7 @@ interface ZipcodeProps {
   companyErrorMessageText: string;
   planInputTitleText: string;
   planInputTitleTextIsRequired: boolean;
+  planInputDescriptionText: string;
   planSelectBoxName: string;
   planSelectBoxOptions: { name: string }[];
   planErrorMessageText: string;
@@ -32,6 +33,7 @@ const Zipcode: React.FC<ZipcodeProps> = ({
   companyErrorMessageText,
   planInputTitleText,
   planInputTitleTextIsRequired,
+  planInputDescriptionText,
   planSelectBoxName,
   planSelectBoxOptions,
   planErrorMessageText,
@@ -46,9 +48,9 @@ const Zipcode: React.FC<ZipcodeProps> = ({
       id='contract'
       className='pt-4 pb-8 mb-10 bg-white'
     >
-      <SectionTitle
-        text={sectionTitleText} 
-      />
+      <SectionTitle>
+        {sectionTitleText}
+      </SectionTitle>
       <div className='pl-2 pt-8'>
         <CompanyModule
           inputTitleText={companyInputTitleText}
@@ -62,6 +64,7 @@ const Zipcode: React.FC<ZipcodeProps> = ({
         <PlanModule
           inputTitleText={planInputTitleText}
           inputTitleTextIsRequired={planInputTitleTextIsRequired}
+          inputDescriptionText={planInputDescriptionText}
           selectBoxName={planSelectBoxName}
           selectBoxOptions={planSelectBoxOptions}
           errorMessageText={planErrorMessageText}

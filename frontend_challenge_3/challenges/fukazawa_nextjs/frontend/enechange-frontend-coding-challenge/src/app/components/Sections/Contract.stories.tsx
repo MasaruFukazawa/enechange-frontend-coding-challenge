@@ -22,6 +22,7 @@ Default.args = {
   companyErrorMessageText: '',
   planInputTitleText: 'プラン',
   planInputTitleTextIsRequired: true,
+  planInputDescriptionText: '電力会社のプランを選択してください',
   planSelectBoxName: 'plan',
   planSelectBoxOptions: [
     { name: '従量電灯B' },

@@ -19,17 +19,18 @@ const Cost: React.FC<CostProps> = ({
   return (
     <>
       <InputTitle 
-        text={inputTitleText}
         isRequired={inputTitleTextIsRequired}
-      />
+      >
+        {inputTitleText}
+      </InputTitle>
       <TextInput
-        name={textInputName}
+        textInputName={textInputName}
       /> 円
       {errorMessageText &&
-        <ErrorMessage
-          text={errorMessageText}
-        />
-    } 
+        <ErrorMessage>
+          {errorMessageText}
+        </ErrorMessage>
+      } 
     </>
   );
 };

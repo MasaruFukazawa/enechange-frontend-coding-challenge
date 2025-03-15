@@ -11,9 +11,9 @@ const Submit: React.FC<SubmitProps> = ({ submitButtonText,  }) => {
       id='submit'
       className='bg-gray-100 p-10 text-center'
     >
-      <SubmitButton
-        text={submitButtonText}
-      />
+      <SubmitButton>
+        {submitButtonText}
+      </SubmitButton>
     </section>
   );
 };
