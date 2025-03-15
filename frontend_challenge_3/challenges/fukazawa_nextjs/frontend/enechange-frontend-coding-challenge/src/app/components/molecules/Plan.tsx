@@ -6,35 +6,41 @@ import InputDescription from '../atoms/InputDescription';
 
 interface PlanProps {
   inputTitleText: string;
-  inputTitleTextIsRequired: boolean;
+  inputTitleIsRequired: boolean;
+  inputDescriptionText: string;
   selectBoxName: string;
   selectBoxOptions: { name: string }[];
+  selectBoxOnChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   errorMessageText: string;
 } 
 const Plan: React.FC<PlanProps> = ({ 
     inputTitleText,
-    inputTitleTextIsRequired,
+    inputTitleIsRequired,
+    inputDescriptionText,
     selectBoxName,
     selectBoxOptions,
+    selectBoxOnChange,
     errorMessageText,
 }) => {
   return (
     <>
       <InputTitle 
-        text={inputTitleText}
-        isRequired={inputTitleTextIsRequired}
-      />
+        isRequired={inputTitleIsRequired}
+      >
+        {inputTitleText}
+      </InputTitle>
       <SelectBox
-        name={selectBoxName}
-        options={selectBoxOptions}
+        selectBoxName={selectBoxName}
+        selectBoxOptions={selectBoxOptions}
+        selectBoxOnChange={selectBoxOnChange}
       />
-      <InputDescription
-        text="※選択肢の説明文を表示するコンポーネント。"
-      />
+      <InputDescription>
+        {inputDescriptionText}
+      </InputDescription>
       {errorMessageText &&
-        <ErrorMessage
-          text={errorMessageText}
-        />
+        <ErrorMessage>
+          {errorMessageText}
+        </ErrorMessage>
     } 
     </>
   );
