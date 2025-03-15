@@ -3,8 +3,8 @@ import PageTitle from '../atoms/PageTitle';
 import PageDescription from '../atoms/PageDescription';
 
 interface HeaderProps {
-  pageTitleText: string;
-  pageDescriptionText: string;
+  pageTitleText: React.ReactNode;
+  pageDescriptionText: React.ReactNode;
 } 
 
 const Header: React.FC<HeaderProps> = ({ pageTitleText, pageDescriptionText }) => {
