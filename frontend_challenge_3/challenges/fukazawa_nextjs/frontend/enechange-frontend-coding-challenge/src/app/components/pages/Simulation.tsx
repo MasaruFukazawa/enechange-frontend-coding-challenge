@@ -8,35 +8,80 @@ import SubmitSection from '../sections/Submit';
 
 
 const Simulation: React.FC = () => {
-  /*
-  const [upperZipcode, setUpperZipcode] = useState<string>('');
-  const [upperZipcodeError, setUpperZipcodeError] = useState<string>('');
 
-  const [upperZipcode, setUpperZipcode] = useState<string>('');
-  const [upperZipcodeError, setUpperZipcodeError] = useState<string>('');
+  const [zipcodeUpperInputValue, setZipcodeUpperInputValue] = useState<string>('');
+  const [zipcodeUpperErrorMessageText, setZipcodeUpperErrorMessageText] = useState<string>('');
+  
 
-  const onUpperZipcodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [zipcodeLowerInputValue, setZipcodeLowerInputValue] = useState<string>('');
+  const [zipcodeLowerErrorMessageText, setZipcodeLowerErrorMessageText] = useState<string>('');
 
-    setUpperZipcodeError('');
+  /**
+   * @name zipcodeUpperInputOnChange
+   * @description 郵便番号上3桁の入力値が変更された際の処理
+   * @param e 
+   * @returns 
+   */
+  const zipcodeUpperInputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    alert(process.env.NEXT_PUBLIC_API_BASE_URL)
+
+    setZipcodeUpperErrorMessageText('');
 
     const value: string = e.target.value;
 
-    if (value[0] !== '1' && value[0] !== '5') {
-      setUpperZipcodeError('サービスエリア対象外です。');
+    if (!value.match(/^[0-9]*$/)) {
+      setZipcodeUpperErrorMessageText('数字のみで入力してください。');
+      return;
+    }
+    else if (!['1', '5'].includes(value[0])) {
+      setZipcodeUpperErrorMessageText('サービスエリア対象外です。');
       return;
     }
     else if (value.length !== 3) {
-      setUpperZipcodeError('3桁で入力してください。');
-      return;
-    }
-    else if (!value.match(/^[0-9]*$/)) {
-      setUpperZipcodeError('数字のみで入力してください。');
+      setZipcodeUpperErrorMessageText('3桁で入力してください。');
       return;
     }
 
-    setUpperZipcode(value);
+    setZipcodeUpperErrorMessageText(value);
   };
-  */
+
+  /**
+   * @name zipcodeLowerInputOnChange
+   * @description 郵便番号下4桁の入力値が変更された際の処理
+   * @param e 
+   * @returns 
+   */
+  const zipcodeLowerInputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    setZipcodeLowerErrorMessageText('');
+
+    const value: string = e.target.value;
+
+    if (!/^\d+$/.test(value)) {
+      setZipcodeLowerErrorMessageText('数字のみで入力してください。');
+      return;
+    }
+    else if (value.length !== 4) {
+      setZipcodeLowerErrorMessageText('4桁で入力してください。');
+      return;
+    }
+
+    setZipcodeLowerInputValue(value);
+  };
+
+  /**
+   * @name handleSubmit
+   * @description フォームが送信された際の処理
+   * @param e 
+   */
+  const handleSubmit = (e: React.FormEvent) => {
+
+    e.preventDefault(); // フォームのデフォルト送信を防ぐ
+    console.log("フォームが送信されました");
+
+  };
+
   return (
     <div
       className='bg-gray-100'
@@ -50,17 +95,17 @@ const Simulation: React.FC = () => {
           <p>いくらおトクになるのか今すぐわかります！</p>
         </>
       />
-      <form>
+      <form onSubmit={handleSubmit}>
         <ZipcodeSection
           sectionTitleText='郵便番号をご入力ください'
           inputTitleText='電気を使用する場所の郵便番号'
           inputTitleTextIsRequired={true}
           zipcodeUppperInputName='zip_upper'
           zipcodeLowerInputName='zip_lower'
-          zipcodeUpperInputOnChange={() => alert('zipcodeUpperInputOnChange called')}
-          zipcodeLowerInputOnChange={() => alert('zipcodeLowerInputOnChange called')}
-          zipcodeUppperErrorMessageText=""
-          zipcodeLowerErrorMessageText=""
+          zipcodeUpperInputOnChange={zipcodeUpperInputOnChange}
+          zipcodeLowerInputOnChange={zipcodeLowerInputOnChange}
+          zipcodeUpperErrorMessageText={zipcodeUpperErrorMessageText}
+          zipcodeLowerErrorMessageText={zipcodeLowerErrorMessageText}
         />
         <ContractSection
           sectionTitleText='電気の契約状況について教えてください'
