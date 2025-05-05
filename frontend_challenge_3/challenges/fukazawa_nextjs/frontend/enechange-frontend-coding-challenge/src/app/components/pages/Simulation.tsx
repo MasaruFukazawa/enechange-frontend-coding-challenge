@@ -18,6 +18,8 @@ const Simulation: React.FC = () => {
   const [zipcodeLowerInputValue, setZipcodeLowerInputValue] = useState<string>('');
   const [zipcodeLowerErrorMessageText, setZipcodeLowerErrorMessageText] = useState<string>('');
 
+  const [companySelectBoxOptions, setCompanySelectBoxOptions] = useState<{ name: string }[]>([]);
+
   /**
    * @name zipcodeUpperInputOnChange
    * @description 郵便番号上3桁の入力値が変更された際の処理
@@ -62,16 +64,18 @@ const Simulation: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error('ネットワーク応答が不正です');
+        throw new Error('電力会社の取得に失敗しました');
       }
 
       const data = await response.json();
 
       if (data.length) {
         console.log('有効な郵便番号です');
+        setCompanySelectBoxOptions(data)
       } else {
         setZipcodeUpperErrorMessageText('サーバー側で無効と判断されました');
       }
+
 
     } catch (error) {
       console.error('エラーが発生しました:', error);
@@ -148,7 +152,7 @@ const Simulation: React.FC = () => {
           companyInputTitleText='電力会社'
           companyInputTitleTextIsRequired={true}
           companySelectBoxName='company'
-          companySelectBoxOptions={[]}
+          companySelectBoxOptions={companySelectBoxOptions}
           companyErrorMessageText=''
           planInputTitleText='プラン'
           planInputTitleTextIsRequired={true}
