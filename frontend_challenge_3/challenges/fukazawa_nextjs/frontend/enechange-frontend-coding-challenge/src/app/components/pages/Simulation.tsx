@@ -5,6 +5,8 @@ import ContractSection from '../sections/Contract';
 import CostSection from '../sections/Cost';
 import Userinfo from '../sections/Userinfo';
 import SubmitSection from '../sections/Submit';
+import { createServerParamsForServerSegment } from 'next/dist/server/app-render/entry-base';
+import { LoggedIn } from '../../../stories/Page.stories';
 
 
 const Simulation: React.FC = () => {
@@ -22,15 +24,16 @@ const Simulation: React.FC = () => {
    * @param e 
    * @returns 
    */
-  const zipcodeUpperInputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-    alert(process.env.NEXT_PUBLIC_API_BASE_URL)
+  const zipcodeUpperInputOnChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
 
     setZipcodeUpperErrorMessageText('');
 
     const value: string = e.target.value;
 
-    if (!value.match(/^[0-9]*$/)) {
+    if (value.length === 0) {
+      setZipcodeUpperErrorMessageText('郵便番号を入力してください。');
+    }
+    else if (!value.match(/^[0-9]*$/)) {
       setZipcodeUpperErrorMessageText('数字のみで入力してください。');
       return;
     }
@@ -38,12 +41,43 @@ const Simulation: React.FC = () => {
       setZipcodeUpperErrorMessageText('サービスエリア対象外です。');
       return;
     }
+    /*
     else if (value.length !== 3) {
       setZipcodeUpperErrorMessageText('3桁で入力してください。');
       return;
     }
+    */
 
-    setZipcodeUpperErrorMessageText(value);
+    setZipcodeUpperInputValue(value);
+
+    try {
+
+      const area_code = value[0]
+
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/energy-companies/?area_code=${encodeURIComponent(area_code)}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('ネットワーク応答が不正です');
+      }
+
+      const data = await response.json();
+
+      if (data.length) {
+        console.log('有効な郵便番号です');
+      } else {
+        setZipcodeUpperErrorMessageText('サーバー側で無効と判断されました');
+      }
+
+    } catch (error) {
+      console.error('エラーが発生しました:', error);
+      setZipcodeUpperErrorMessageText('通信エラーが発生しました');
+    }
+
   };
 
   /**
@@ -69,6 +103,8 @@ const Simulation: React.FC = () => {
 
     setZipcodeLowerInputValue(value);
   };
+
+
 
   /**
    * @name handleSubmit
