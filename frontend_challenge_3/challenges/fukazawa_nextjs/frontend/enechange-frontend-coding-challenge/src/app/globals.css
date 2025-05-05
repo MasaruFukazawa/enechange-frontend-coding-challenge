@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --section-title-bar-color: #FFA500;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+/* 必須マーク用 */
+.required::before {
+  content: "必 須";
+  color: #ffffff;
+  background: #f95656;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+}

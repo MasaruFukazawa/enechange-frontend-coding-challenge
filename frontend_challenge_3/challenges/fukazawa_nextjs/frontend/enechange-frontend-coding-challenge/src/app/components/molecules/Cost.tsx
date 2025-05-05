@@ -1,0 +1,38 @@
+import React from 'react';
+import InputTitle from '../atoms/InputTitle';
+import ErrorMessage from '../atoms/ErrorMessage';
+import TextInput from '../atoms/TextInput';
+
+interface CostProps {
+  inputTitleText: string;
+  inputTitleTextIsRequired: boolean;
+  textInputName: string;
+  errorMessageText: string;
+} 
+
+const Cost: React.FC<CostProps> = ({ 
+    inputTitleText,
+    inputTitleTextIsRequired,
+    textInputName,
+    errorMessageText,
+}) => {
+  return (
+    <>
+      <InputTitle 
+        isRequired={inputTitleTextIsRequired}
+      >
+        {inputTitleText}
+      </InputTitle>
+      <TextInput
+        textInputName={textInputName}
+      /> 円
+      {errorMessageText &&
+        <ErrorMessage>
+          {errorMessageText}
+        </ErrorMessage>
+      } 
+    </>
+  );
+};
+
+export default Cost;
